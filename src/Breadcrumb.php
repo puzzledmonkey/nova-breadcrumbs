@@ -35,7 +35,7 @@ class Breadcrumb extends NovaBreadcrumb {
      * @return static
      */
 
-    public static function resource($resourceClass) {
+    public static function resource($resourceClass): static {
         if ($resourceClass instanceof Resource && $resourceClass->model()->exists === true) {
             return static::detailResource($resourceClass);
         }
